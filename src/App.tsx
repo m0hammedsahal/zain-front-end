@@ -10,6 +10,7 @@ import Consultation from "./components/Consultation";
 import Background3D from "./components/Background3D";
 import LocationPicker from "./components/LocationPicker";
 import ProductUploadSection from "./components/ProductUploadSection";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const handleLocationSelect = (location: { lat: number; lng: number; address: string }) => {
@@ -32,6 +33,7 @@ function App() {
             path="/location"
             element={<LocationPicker onLocationSelect={handleLocationSelect} />}
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </div>
